@@ -1,4 +1,4 @@
-// const img_src =["img/mainbg03.jpg","img/mainbg02.jpg","img/mainbg01.jpg","img/main-top.jpg"];
+// const img_src =["mainbg03.jpg","mainbg02.jpg","mainbg01.jpg","main-top.jpg"];
 // let num = -1;
 
 // function slideshow_timer(){
@@ -114,9 +114,9 @@ bar.animate(1.0, function () {//バーを描画する割合を指定します 1.
 var windowwidth = window.innerWidth || document.documentElement.clientWidth || 0;
 		if (windowwidth > 768){
 			var responsiveImage = [//PC用の画像
-				{ src: './img/mainbg01.jpg'},
-				{ src: './img/mainbg02.jpg'},
-				{ src: './img/mainbg03.jpg'}
+				{ src: './mainbg01.jpg'},
+				{ src: './mainbg02.jpg'},
+				{ src: './mainbg03.jpg'}
 			];
 		} else {
 			var responsiveImage = [//タブレットサイズ（768px）以下用の画像
@@ -137,9 +137,9 @@ $(function() {
 		timer:false,
 		animation: 'kenburns',//スライドアニメーションの種類。http://vegas.jaysalvat.com/documentation/transitions/参照。kenburns、kenburnsUp、kenburnsDown、kenburnsRight、kenburnsLeft、kenburnsUpLeft、kenburnsUpRight、kenburnsDownLeft、kenburnsDownRight、randomが設定可能。
 		slides: [
-			{ src: './img/mainbg01.jpg'},
-			{ src: './img/mainbg02.jpg'},
-			{ src: './img/mainbg03.jpg'}
+			{ src: './mainbg01.jpg'},
+			{ src: './mainbg02.jpg'},
+			{ src: './mainbg03.jpg'}
 		]
 	});
 });
