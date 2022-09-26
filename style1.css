@@ -18,7 +18,7 @@ body{
 }
 
 .message {
-    background:url(../img/bg.png);
+    background:url(../bg.png);
     display: flex;
     justify-content: center;
     flex-direction: row-reverse;
@@ -78,7 +78,7 @@ ul.header_nabi_list {
     display: flex;
     justify-content: center;
     margin: auto;
-    background:url(../img/bg.png);
+    background:url(../bg.png);
 }
 
 li.header_nabi_list_item {
@@ -123,7 +123,7 @@ h1{
 }
 
 .plan {
-    background: url(../img/bg02.png);
+    background: url(../bg02.png);
 }
 h2.plan-title{
     text-align: center;
@@ -180,7 +180,7 @@ h2.access-title{
 }
 
 .access {
-    background: url(../img/bg.png);
+    background: url(../bg.png);
 }
 
 .photo{
