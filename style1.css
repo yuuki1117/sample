@@ -18,7 +18,7 @@ body{
 }
 
 .message {
-    background:url(../bg.png);
+    background:url(./bg.png);
     display: flex;
     justify-content: center;
     flex-direction: row-reverse;
