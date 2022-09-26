@@ -1,0 +1,838 @@
+html {
+    font-size: 100%;
+}
+*{
+    box-sizing: border-box;
+}
+
+img{
+    max-width: 100%;
+    height:auto;
+    vertical-align:top;
+}
+
+body{
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+.message {
+    background:url(../img/bg.png);
+    display: flex;
+    justify-content: center;
+    flex-direction: row-reverse;
+}
+
+.message-title {
+    -ms-writing-mode: tb-rl;
+    writing-mode: vertical-rl;
+    margin:20px;
+}
+
+p.oomoji {
+font-size: 25px;
+margin: 25px;
+}
+
+p.oomoji1 {
+  font-size: 25px;
+  margin: 25px;
+  }
+
+
+.message-text1 {
+    -ms-writing-mode: tb-rl;
+    writing-mode: vertical-rl;
+    margin:20px;
+}
+.message-text1 span {
+    text-combine-upright: all; 
+}
+
+
+.message-text2 {
+    -ms-writing-mode: tb-rl;
+    writing-mode: vertical-rl;
+    margin:20px;
+}
+
+.message-text3 {
+    -ms-writing-mode: tb-rl;
+    writing-mode: vertical-rl;
+    margin:20px;
+}
+
+.message-text4 {
+    -ms-writing-mode: tb-rl;
+    writing-mode: vertical-rl;
+    margin-top:220px;
+}
+
+nav.header_navi{
+    color:#fff;
+}
+
+ul.header_nabi_list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    background:url(../img/bg.png);
+}
+
+li.header_nabi_list_item {
+    color: #fff;
+    margin-left: 20px;
+}
+
+h1{
+    position: absolute;
+    color:#fff;
+}
+
+.header_wrapper {
+    position:relative;
+}
+
+.photo2 {
+    display: flex;
+}
+
+#room-btn {
+    cursor: pointer;
+    margin: 50px;
+}
+
+.photo3 {
+    display: flex;
+}
+
+#dist-btn {
+    cursor: pointer;
+    margin: 50px;
+}
+
+.photo4 {
+    display: flex;
+}
+
+#onnsenn-btn {
+    cursor: pointer;
+    margin: 50px;
+}
+
+.plan {
+    background: url(../img/bg02.png);
+}
+h2.plan-title{
+    text-align: center;
+}
+
+.plan-content {
+display: flex;
+}
+
+.plan-menu1{
+    margin:50px;
+}
+
+.plan-menu2{
+    margin:50px;
+}
+
+.plan-menu3{
+    margin:50px;
+}
+
+.eigyo {
+    display: flex;
+    justify-content: center;
+}
+
+h2.info-title{
+    text-align: center;
+}
+
+.title1 {
+    background-color: #F6F6F6;
+    display: flex;
+    height:35%;
+    padding: 10px;
+    margin: 15px;
+}
+
+.formation {
+    display: flex;
+    justify-content: center;
+}
+
+.formation1 {
+    margin: auto;
+}
+
+.formation2 {
+    margin: auto;
+}
+
+h2.access-title{
+    text-align: center;
+}
+
+.access {
+    background: url(../img/bg.png);
+}
+
+.photo{
+    display: flex;
+    justify-content: center;
+    margin: 50px;
+}
+
+p.access-text{
+    margin: 80px;
+}
+
+.gogole {
+    text-align: center;
+}
+
+header.headertop {
+    height: 70px;/*高さ指定*/
+	width:100%;/*横幅指定*/
+	/*以下はレイアウトのためのCSS*/
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background:#333;
+	color:#fff;
+	text-align: center;
+	padding: 20px;
+}
+
+.header.fixed{
+	position: fixed;/*fixedを設定して固定*/
+  z-index: 999;/*最前面へ*/
+  top:0;/*位置指定*/
+  left:0;/*位置指定*/
+}
+
+li.header_nabi_list_item a{
+    color: black;
+}
+
+.tab{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .tab li a{
+    display: block;
+    text-decoration: none;
+    background:#ddd;
+    margin:0 2px;
+    padding:10px 20px;
+  }
+  /*liにactiveクラスがついた時の形状*/
+  .tab li.active a{
+    background:#fff;
+    text-decoration: none;
+  }
+  
+  
+  /*エリアの表示非表示と形状*/
+  .area {
+    display: none;/*はじめは非表示*/
+    opacity: 0;/*透過0*/
+    background: #fff;
+    padding:50px 20px;
+  }
+  
+  /*areaにis-activeというクラスがついた時の形状*/
+  .area.is-active {
+      display: block;/*表示*/
+      animation-name: displayAnime;/*ふわっと表示させるためのアニメーション*/
+      animation-duration: 2s;
+      animation-fill-mode: forwards;
+      overflow-y: scroll;
+      height: 250px;
+  }
+  
+  @keyframes displayAnime{
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  ul {
+    list-style:none;
+  }
+
+  .area h2{
+    font-size:1.3rem;
+    margin:0 0 20px 10px;
+  }
+  
+  .area li{
+    padding: 10px; 
+    border-bottom: 1px solid #ddd;
+  }
+
+  .wrapper{
+    width:100%;
+    max-width: 960px;
+    margin:30px auto;
+      background:#fefefe;
+  }
+
+
+  #splash {
+    /*fixedで全面に固定*/
+	position: fixed;
+	z-index: 999;
+	width: 100%;
+	height: 100%;
+	background:#333;
+	text-align:center;
+	color:#fff;
+}
+
+/* Loadingバー中央配置　*/
+#splash_text {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+    z-index: 999;
+	width: 100%;
+	transform: translate(-50%, -50%);
+	color: #fff;
+}
+
+
+#search-wrap {
+    position: absolute;/*絶対配置にして*/
+  z-index: 2;/*最前面に設定。数字は変更可*/
+  top:5px;
+  right:60px;
+}
+
+/*テキスト入力input設定*/
+#search-text{
+ -webkit-appearance:none;/*SafariやChromeのデフォルトの設定を無効*/
+ width: 60px;/*テキスト入力エリアが伸びる前の横幅*/
+ height: 60px;
+   padding: 20px;
+ border: none;
+ background:#fff url("https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/7-2-3/img/icon_search.svg") no-repeat 17px center;/*虫眼鏡アイコンを背景に表示*/
+ background-size: 25px 25px;
+ transition: all 0.5s;/*transitionを使ってスムースに伸ばす*/
+ outline: none;
+ cursor: pointer;/*カーソルを指マークに*/
+}
+
+/*テキスト入力inputにフォーカスした時の形状*/
+#search-text:focus {
+ width: 250px;/*テキスト入力エリアが伸びる後の横幅*/
+ padding: 20px 0 20px 60px;
+ box-shadow: 0 2px rgba(6,0,1,.26);
+}
+
+
+.btn{
+    /*アニメーションの起点とするためrelativeを指定*/
+    position: relative;
+  overflow: hidden;
+    /*ボタンの形状*/
+  text-decoration: none;
+  display: inline-block;
+    border: 1px solid #555;/* ボーダーの色と太さ */
+    padding: 10px 30px;
+    text-align: center;
+    outline: none;
+    /*アニメーションの指定*/   
+    transition: ease .2s;
+}
+
+/*ボタン内spanの形状*/
+.btn span {
+  position: relative;
+  z-index: 3;/*z-indexの数値をあげて文字を背景よりも手前に表示*/
+  color:#333;
+}
+
+.btn:hover span{
+  color:#fff;
+}
+
+/*== 背景が流れる（左から右） */
+.bgleft:before {
+  content: '';
+    /*絶対配置で位置を指定*/
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+    /*色や形状*/
+  background:#333;/*背景色*/
+  width: 100%;
+  height: 100%;
+    /*アニメーション*/
+  transition: transform .6s cubic-bezier(0.8, 0, 0.2, 1) 0s;
+  transform: scale(0, 1);
+  transform-origin: right top;
+}
+
+/*hoverした際の形状*/
+.bgleft:hover:before{
+  transform-origin:left top;
+  transform:scale(1, 1);
+}
+
+.bgleft:before {
+    content: '';
+      /*絶対配置で位置を指定*/
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+      /*色や形状*/
+    background:#333;/*背景色*/
+    width: 100%;
+    height: 100%;
+      /*アニメーション*/
+    transition: transform .6s cubic-bezier(0.8, 0, 0.2, 1) 0s;
+    transform: scale(0, 1);
+    transform-origin: right top;
+  }
+  
+  /*hoverした際の形状*/
+  .bgleft:hover:before{
+    transform-origin:left top;
+    transform:scale(1, 1);
+  }
+
+
+
+  #header.DownMove{
+    position: fixed;
+  width: 100%;
+  animation: DownAnime 0.5s forwards;
+  }
+
+  #header h1 {
+  text-transform: uppercase;
+    font-size: 1.5rem;
+    padding: 0 0 0 2%;
+    line-height: 1;
+    white-space: nowrap;
+  }
+
+  #header h1 a{
+    color:#ddd;
+  }
+
+  #header {
+    position: fixed;
+    height: 70px;
+    width: 100%;
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding: 20px 100px 20px 0;
+  }
+
+  nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  nav ul li a {
+    display: block;
+    text-decoration: none;
+    color: #eee;
+    padding: 20px 35px;
+    transition: all .3s;
+  }
+
+  .g-nav-open {
+    display: none;
+  }
+
+  h1 {
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 0.2em;
+  }
+
+  nav ul li {
+    position: relative;
+  }
+
+
+
+  #slider {
+    width: 100%;
+    height: 1000px;/*スライダー全体の縦幅を画面の高さいっぱい（100vh）にする*/
+}
+
+#header.change-color {
+  background-color: #eee;
+  
+}
+
+nav ul li a.change-color {
+  color: black;
+}
+
+#header h1 a.change-color {
+  color:black;
+}
+
+
+.scrolldown2{
+  /*描画位置※位置は適宜調整してください*/
+position:absolute;
+bottom:10px;
+right:10%;
+}
+
+/*Scrollテキストの描写*/
+.scrolldown2 span{
+  /*描画位置*/
+position: absolute;
+left:10px;
+bottom:10px;
+  /*テキストの形状*/
+color: #eee;
+font-size: 0.7rem;
+letter-spacing: 0.05em;
+/*縦書き設定*/
+-ms-writing-mode: tb-rl;
+  -webkit-writing-mode: vertical-rl;
+  writing-mode: vertical-rl;
+}
+
+/* 丸の描写 */
+.scrolldown2:before {
+  content: "";
+  /*描画位置*/
+  position: absolute;
+  bottom:0;
+  left:-4px;
+  /*丸の形状*/
+width:10px;
+height:10px;
+border-radius: 50%;
+background:#eee;
+  /*丸の動き1.6秒かけて透過し、永遠にループ*/
+animation:
+  circlemove 1.6s ease-in-out infinite,
+  cirlemovehide 1.6s ease-out infinite;
+}
+
+/*下からの距離が変化して丸の全体が上から下に動く*/
+@keyframes circlemove{
+    0%{bottom:45px;}
+   100%{bottom:-5px;}
+}
+
+/*上から下にかけて丸が透過→不透明→透過する*/
+@keyframes cirlemovehide{
+    0%{opacity:0}
+   50%{opacity:1;}
+  80%{opacity:0.9;}
+100%{opacity:0;}
+}
+
+/* 線の描写 */
+.scrolldown2:after{
+content:"";
+  /*描画位置*/
+position: absolute;
+bottom:0;
+left:0;
+  /*線の形状*/
+width:2px;
+height: 50px;
+background:#eee;
+}
+
+@media screen and (max-width: 480px){ 
+
+.message {
+  justify-content: initial;
+}
+
+p.oomoji {
+  margin: initial;
+}
+
+.message-title,.message-text1,.message-text2,.message-text3,.message-text4 {
+  margin: initial;
+}
+
+.photo2,.photo3,.photo4,.plan-content {
+  /* display: block; */
+  flex-direction: column;
+}
+
+.photo {
+  display: block;
+margin: initial;
+
+}
+
+p.access-text{
+  margin: initial;
+}
+
+.gogole {
+  height: 0;
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+  }
+  .gogole iframe {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /*===========================================================*/
+/* 機能編 5-1-14 クリックしたらナビが右から左に出現*/
+/*===========================================================*/
+
+/*========= ナビゲーションのためのCSS ===============*/
+
+#g-nav{
+  /*position:fixed;にし、z-indexの数値を大きくして前面へ*/
+  position:fixed;
+  z-index: 999;
+  /*ナビのスタート位置と形状*/
+top:0;
+  right: -100%;
+width:30%;
+  height: 100vh;/*ナビの高さ*/
+background: linear-gradient(45deg,rgba(88,182,211,.9),rgba(229,93,135,.9));/*背景色（グラデーション）*/
+  /*動き*/
+transition: all 0.6s;
+}
+
+/*アクティブクラスがついたら位置を0に*/
+#g-nav.panelactive{
+  right: 0;
+}
+
+/*ナビゲーションの縦スクロール*/
+#g-nav.panelactive #g-nav-list{
+  /*ナビの数が増えた場合縦スクロール*/
+  position: fixed;
+  z-index: 999; 
+  width: 30%;
+  height: 100vh;/*表示する高さ*/
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/*横幅が768px以下になった際の指定*/
+@media only screen and (max-width: 768px) {
+  #g-nav,
+  #g-nav.panelactive #g-nav-list{
+      width:100%;
+  }
+}
+
+/*ナビゲーション*/
+#g-nav ul {
+  /*ナビゲーション天地中央揃え*/
+  position: absolute;
+  z-index: 999;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+}
+
+/*リストのレイアウト設定*/
+
+#g-nav li{
+list-style: none;
+  text-align: center;
+}
+
+#g-nav li a{
+color: #fff;
+text-decoration: none;
+padding:10px;
+display: block;
+text-transform: uppercase;
+letter-spacing: 0.1em;
+font-weight: bold;
+  transition: all .5s;
+}
+
+#g-nav li a:hover{
+  color:#ccc;
+}
+
+/*===========================================================*/
+/* 機能編 5-2-1	3本線が×に*/
+/*===========================================================*/
+.openbtn{
+position:fixed;
+  z-index: 9999;/*ボタンを最前面に*/
+top:10px;
+right: 10px;
+cursor: pointer;
+  width: 50px;
+  height:50px;
+}
+
+/*×に変化*/	
+.openbtn span{
+  display: inline-block;
+  transition: all .4s;
+  position: absolute;
+  left: 14px;
+  height: 3px;
+  border-radius: 2px;
+background-color: #fff;
+  width: 45%;
+}
+
+.openbtn span:nth-of-type(1) {
+top:15px;	
+}
+
+.openbtn span:nth-of-type(2) {
+top:23px;
+}
+
+.openbtn span:nth-of-type(3) {
+top:31px;
+}
+
+.openbtn.active span:nth-of-type(1) {
+  top: 18px;
+  left: 18px;
+  transform: translateY(6px) rotate(-45deg);
+  width: 30%;
+}
+
+.openbtn.active span:nth-of-type(2) {
+opacity: 0;
+}
+
+.openbtn.active span:nth-of-type(3){
+  top: 30px;
+  left: 18px;
+  transform: translateY(-6px) rotate(45deg);
+  width: 30%;
+}
+
+/*===========================================================*/
+/* 機能編 5-3-1中心から外に線が伸びる（下部）*/
+/*===========================================================*/
+
+.sort-btn{
+display: flex;
+justify-content: center;
+margin:50px 0;
+list-style: none;
+  text-transform: uppercase;
+}
+
+.sort-btn li{
+position: relative;
+  cursor: pointer;
+  margin: 0 20px;
+}
+
+.sort-btn li::after {
+  content: '';
+  /*絶対配置で線の位置を決める*/
+  position: absolute;
+  bottom:-5px;
+  left: 25%;
+  /*線の形状*/
+  width: 50%;
+  height: 2px;
+  background:#a0a0a0;
+  /*アニメーションの指定*/
+  transition: all .3s;
+  transform: scale(0, 1);/*X方向0、Y方向1*/
+  transform-origin: center top;/*上部中央基点*/
+}
+
+/*現在地とhoverの設定*/
+.sort-btn li.active::after,
+.sort-btn li:hover::after{
+  transform: scale(1, 1);/*X方向にスケール拡大*/
+}
+
+p.oomoji1 {
+  font-size: initial;
+}
+
+.phto3 {
+  flex-direction: column;
+}
+
+.photo3 img {
+order: 1;
+}
+
+.photo3 .mesaage-title3{
+  order:2;
+}
+
+#search-text:focus {
+  width: 200px;/*テキスト入力エリアが伸びる後の横幅*/
+ }
+
+}
+
+/*横幅が375px以下になった際の指定*/
+@media only screen and (max-width: 375px) {
+.sort-btn{
+  flex-wrap: wrap;
+justify-content: space-between;
+}
+
+.sort-btn li{
+width:48%;
+margin:0 0 10px 0;
+text-align:center;
+}	
+}
+
+
+
